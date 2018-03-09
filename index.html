@@ -28,7 +28,7 @@
   	</header>
   	<main class="container">
   		<div class="main-image">
-  			<img src="img/promo-background-1200.jpg" width="1200" height="800" alt="Заголовок сайта">
+  			<img src="img/promo.png" width="1200" height="800" alt="Заголовок сайта">
   		</div>
   		<h1 class="main-head">Седона-небольшой городок в Аризоне, заслуживающий большего!</h1>
   		<p class="main-reason">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p> 
@@ -76,8 +76,18 @@
   		<section class="hotels-search">
   			<h2 class="hotels-search-header">Заинтересовались?</h2>
   			<p class="hotels-search-text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-  			<span class="button">Поиск гостиницы в Седоне</span>
-  			<!-- Форма -->
+  			<button class="hotels-search-button">Поиск гостиницы в Седоне</button>
+  			<form class="hotels-search-form" action="https://echo.htmlacademy.ru" method="post">
+  				<label for="arrival-date">Дата заезда:</label>
+  				<input id="arrival-date" type="text" name="arrival-date" value="24 апреля 2017">
+                <label for="departure-day">Дата выезда:</label>
+                <input id="departure-day" type="text" name="departure-day" value="4 июля 2017">
+                <label for="count-adult">Взрослые:</label>
+                <input id="count-adult" type="text" name="count-adult" value="2">
+                <label for="count-children">Дети:</label>
+                <input id="count-children" type="text" name="count-children" value="2">
+                <button class="search-button">Найти</button>
+  			</form>  			
   			<div class="hotels-map">
   				<img src="img/map-1200.jpg" width="1718" height="748" alt="Карта Седоны">
   			</div>
@@ -87,18 +97,18 @@
       <p class="footer-hashtag">#VISITSEDONA</p> 
       <ul  class="social-list">
           <li class="social-item">
-          	<a class="social-button" href="#">Твиттер</a>
+          	<a class="social-button" href="https://twitter.com/">Твиттер</a>
           </li>
           <li class="social-item">
-          	<a class="social-button" href="#">Фэйсбук</a>
+          	<a class="social-button" href="https://ru-ru.facebook.com/">Фэйсбук</a>
           </li>
           <li class="social-item">
-          	<a class="social-button" href="#">Ютуб</a>
+          	<a class="social-button" href="https://www.youtube.com/" >Ютуб</a>
           </li>
       </ul>
       <address class="developer-contact">       
         Website by
-          <a class="developer-link" href="#"> <img src="img/logo-htmlacademy.svg" width="115" height="41" alt="Логотип академии"> </a>      
+          <a class="developer-link" href="https://htmlacademy.ru/intensive/htmlcss"> <img src="img/logo-htmlacademy.svg" width="115" height="41" alt="Логотип академии"> </a>      
       </address>   
     </footer>
   </body>

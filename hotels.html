@@ -7,7 +7,7 @@
   <body>
     <header class="main-header">
       <nav class="main-nav">
-        <a class="main-header-logo">
+        <a class="main-header-logo" href="index.html">
           <img src="img/logo.png" width="138" height="70" alt="Логотоп сайта Седона">
         </a>
         <ul class="main-nav-list">
@@ -27,9 +27,51 @@
       </nav>
     </header>
     <main>
-      <section class="conditions-list">
-        <!-- Форма -->
-      </section>
+      <form class="hotels-filter=form" action="https://echo.htmlacademy.ru" method="post">
+        <fieldset class="infrastructure">
+          <legend>Инфраструктура:</legend>
+          <label>
+            <input type="checkbox" name="infrastructure-pool">
+            Бассейн
+          </label>
+          <label>
+            <input type="checkbox" name="infrastructure-parking">
+            Бассейн
+          </label>
+          <label>
+            <input type="checkbox" name="infrastructure-wifi">
+            Бассейн
+          </label>
+        </fieldset>
+        <fieldset class="type-living">
+          <legend>Тип жилья</legend>
+          <label>
+            <input type="checkbox" name="type-hotel">
+            Гостиница
+          </label>
+          <label>
+            <input type="checkbox" name="type-motel">
+            Мотель
+          </label>
+          <label>
+            <input type="checkbox" name="type-apartment">
+            Апартаменты
+          </label>
+        </fieldset>
+        <fieldset class="hotel-price">
+          <legend>Стоимость в сутки(Р):</legend>
+          <label>
+            От
+            <input type="text" name="low-price" value="0">
+          </label>
+          <label>
+            До
+            <input type="text" name="high-price" value="3000">
+          </label>
+          <button class="filters=button">Показать</button>
+        </fieldset>
+      </form>
+      
       <section class="catalog">
         <section class="sorting">
           <p class="search-result">Найдено:<span class="hotels-number">3</span></p>
@@ -109,7 +151,7 @@
       </ul>
       <address class="developer-contact">       
         Website by 
-          <a class="developer-link" href="#"> <img src="img/logo-htmlacademy.svg" width="115" height="41" alt="Логотип академии"> </a>      
+          <a class="developer-link" href="https://htmlacademy.ru/intensive/htmlcss"> <img src="img/logo-htmlacademy.svg" width="115" height="41" alt="Логотип академии"> </a>      
       </address>   
     </footer>
   </body>
