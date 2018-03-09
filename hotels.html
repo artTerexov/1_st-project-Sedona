@@ -27,48 +27,48 @@
       </nav>
     </header>
     <main>
-      <form class="hotels-filter=form" action="https://echo.htmlacademy.ru" method="post">
-        <fieldset class="infrastructure">
+      <form class="hotels-filter-form" action="https://echo.htmlacademy.ru" method="get">
+        <fieldset class="filters-item">
           <legend>Инфраструктура:</legend>
-          <label>
-            <input type="checkbox" name="infrastructure-pool">
+          <label class="filters-type">
+            <input type="checkbox" name="infrastructure-pool" class="filters-checkbox">
             Бассейн
           </label>
-          <label>
-            <input type="checkbox" name="infrastructure-parking">
+          <label class="filters-type">
+            <input type="checkbox" name="infrastructure-parking" class="filters-checkbox">
             Бассейн
           </label>
-          <label>
-            <input type="checkbox" name="infrastructure-wifi">
+          <label class="filters-type">
+            <input type="checkbox" name="infrastructure-wifi" class="filters-checkbox">
             Бассейн
           </label>
         </fieldset>
-        <fieldset class="type-living">
+        <fieldset class="filters-item">
           <legend>Тип жилья</legend>
-          <label>
-            <input type="checkbox" name="type-hotel">
+          <label class="filters-type">
+            <input type="checkbox" name="type-hotel" class="filters-checkbox">
             Гостиница
           </label>
-          <label>
-            <input type="checkbox" name="type-motel">
+          <label class="filters-type">
+            <input type="checkbox" name="type-motel" class="filters-checkbox">
             Мотель
           </label>
-          <label>
-            <input type="checkbox" name="type-apartment">
+          <label class="filters-type">
+            <input type="checkbox" name="type-apartment" class="filters-checkbox">
             Апартаменты
           </label>
         </fieldset>
-        <fieldset class="hotel-price">
+        <fieldset class="filters-item">
           <legend>Стоимость в сутки(Р):</legend>
-          <label>
+          <label class="filters-price-name">
             От
-            <input type="text" name="low-price" value="0">
+            <input type="text" name="low-price" placeholder="0" class="filters-text">
           </label>
-          <label>
+          <label class="filters-price-name">
             До
-            <input type="text" name="high-price" value="3000">
+            <input type="text" name="high-price" placeholder="3000" class="filters-text">
           </label>
-          <button class="filters=button">Показать</button>
+          <button class="filters-button">Показать</button>
         </fieldset>
       </form>
       
