@@ -336,10 +336,21 @@ a {
 }
 
 .hotels-filter-form {
+    display: flex;
+    position: relative;
+    margin: 0;
+    padding: 30px 70px;
+    height: 217px;
+    box-sizing: border-box;
 	background-image: url("../img/filter-background-1200.jpg");
 	background-position: top center;
     background-repeat: no-repeat;
+    background-size: 1200px 800px;    
     text-align: center;    
+}
+
+fieldset {
+    border: 0 none;
 }
 
 .filters-fieldset legend {
@@ -375,6 +386,15 @@ a {
     font-weight: 700;
 }
 
+.sorting {
+    display: flex;
+    margin: 0 73px;
+    padding: 0;    
+    justify-content: space-between;
+    width: 1056px;
+
+}
+
 .sorting-title {
     color: #000000;
     font-size: 12px;
@@ -383,10 +403,16 @@ a {
 }
 
 .sorting-list a {
+    margin: 0;
+    display: inline;
     font-size: 12px;
     line-height: 18px;
     color: rgba(0, 0, 0, 0.3);
     border-bottom: 1px dashed #81b3d2;
+}
+
+.sorting-item {
+    display: inline;
 }
 
 .sorting-list a:hover,
@@ -403,6 +429,9 @@ a {
     color: #81b3d2;
     border: none;
 }
+
+
+
 .hotel-name h3 {
     color: #000000;
     font-size: 21px;
