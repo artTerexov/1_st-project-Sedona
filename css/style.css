@@ -9,7 +9,9 @@ body {
     text-transform: uppercase;
     background-color: #ffffff;
     width: 1200px;
-    margin: 0 auto;                
+    margin: 0 auto;
+    border-left: 40px solid #f2f2f2;
+    border-right: 40px solid #f2f2f2;                  
 }
 
 a {
@@ -22,7 +24,6 @@ fieldset {
 
 .visually-hidden:not(:focus):not(:active) {
   position: absolute;
-
   width: 1px;
   height: 1px;
   margin: -1px;
@@ -50,9 +51,9 @@ fieldset {
 }
 
 .main-nav-list-left,
-.main-nav-list-right {
-    box-shadow: inset 0 0 0 2px rgb(234, 255, 45);
+.main-nav-list-right {    
     display: inline-flex;
+    justify-content: space-between;
     padding: 0;    
     margin: 0;    
     list-style: none;
@@ -61,12 +62,12 @@ fieldset {
 
 .main-nav-list-left .main-nav-item {
     width: 219px;
-    text-align: left;
+    text-align: left;    
 }
 
 .main-nav-list-right .main-nav-item {
     width: 219px;
-    text-align: right;
+    text-align: right;    
 }
 
 
@@ -504,6 +505,21 @@ fieldset {
     transform: rotate(90deg)
 }
 
+.plus:hover::after,
+.plus:hover::before,
+.mines:hover::before,
+.plus:focus::after,
+.plus:focus::before,
+.mines:focus::before {
+    background-color: #000000;
+}
+
+.plus:active::after,
+.plus:active::before,
+.mines:active::before {
+    background-color: #81b3d2;
+}
+
 
 .hotels-search-form input::-webkit-input-placeholder { 
 	color: #000000 ; 
@@ -626,7 +642,8 @@ fieldset {
 .hotels-filter-form {
     display: flex;
     padding: 25px 70px;
-    margin-bottom: 30px;    
+    margin-bottom: 30px;
+    height: 217px;    
     box-sizing: border-box;
 	background-image: url("../img/filter-background-1200.jpg");
 	background-position: top center;
@@ -721,46 +738,56 @@ fieldset {
     color: #000000;
 }
 
-.search-result {
+.catalog {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 62px;
+}
+
+.sorting {
+    display: flex;        
+    padding: 0 72px;
+    margin-bottom: 55px;        
+}
+
+.search-result {    
+    margin: 0;    
+    margin-right: 48px;
     color: #000000;
     font-size: 21px;
     line-height: 26px;
     font-weight: 700;
 }
 
-.catalog {
-    padding: 0;
-    margin: 0;
-
+.hotels-number {
+    display: inline-block;
+    padding-left: 6px;
 }
 
-.sorting {
-    display: flex;
-    margin: 0 73px;
-    padding: 0;    
-    justify-content: space-between;
-    width: 1056px;
-
-}
-
-.sorting-title {
+.sorting-title { 
+    margin: auto 0; 
+    padding-right: 38px;   
     color: #000000;
     font-size: 12px;
     line-height: 18px;
     font-weight: 400;
 }
 
-.sorting-list a {
+.sorting-list {    
+    display: flex;
+    justify-content: space-between;
+    width: 240px;
+    padding: 0;
     margin: 0;
-    display: inline;
+}
+
+.sorting-list a {    
+    margin: 0;
+    display: inline-block;
     font-size: 12px;
     line-height: 18px;
     color: rgba(0, 0, 0, 0.3);
     border-bottom: 1px dashed #81b3d2;
-}
-
-.sorting-item {
-    display: inline;
 }
 
 .sorting-list a:hover,
@@ -778,23 +805,110 @@ fieldset {
     border: none;
 }
 
+.sorting-arrow {
+    display: flex;
+    justify-content: space-between;
+    width: 35px;
+    margin-left: 500px; 
+}
 
+.sorting-arrow path:hover,
+.sorting-arrow path:focus {
+    fill: #231f20;
+}
+
+.sorting-arrow path:active,
+.sorting-arrow path:visited {
+    fill: #81b3d2;
+}
+
+.searched-list {  
+    width: 1200px;    
+    margin: 0;
+    padding: 0;    
+}
+
+.searched-item {     
+    display: flex;
+    margin-bottom: 50px;
+    position: relative;    
+    padding-left: 72px;
+}
+
+.searched-item::before {
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: 0;
+    width: 1200px;
+    height: 1px;
+    background-color: #e5e5e5;
+}
+
+.searched-item:last-child::after {
+    content: "";
+    position: absolute;
+    top: 120px;
+    left: 0;
+    width: 1200px;
+    height: 1px;
+    background-color: #e5e5e5;
+}
+
+.hotel-img {
+    padding-top: 5px;
+}
+
+
+.hotel-name {    
+    display: flex;
+
+}
+
+.hotel-discription {    
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    margin-right: 525px;    
+}
 
 .hotel-name h3 {
+    margin: 0;          
     color: #000000;
     font-size: 21px;
     line-height: 26px;
     font-weight: 700;
 }
 
+.hotel-inf {     
+    display: flex;
+    justify-content: space-between;       
+    width: 183px;         
+}
+
+.info-item {
+    margin: 0;  
+    margin-top: 8px;
+    margin-bottom: 13px;
+}
+
+.hotel-action {
+    display: flex;
+    width: 258px;
+    justify-content: space-between;
+}
+
 .info-btn-1 {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 110px;
+    padding: 3px;
+    text-align: center;
     font-size: 14px;
     line-height: 21px;
     font-weight: 700;    
     background-color: #81b3d2;    
-    color: #ffffff;
-    display: inline-block;
-    padding: 8px 17px;
+    color: #ffffff;    
 }
 
 .info-btn-1:hover,
@@ -807,13 +921,16 @@ fieldset {
 }
 
 .info-btn-2 {
+    display: inline-block;    
+    text-align: center;
+    box-sizing: border-box;
+    width: 142px;
+    padding: 3px;
     font-size: 14px;
     line-height: 21px;
     font-weight: 700;    
     background-color: #766357;    
-    color: #ffffff;
-    display: inline-block;
-    padding: 8px 16px;
+    color: #ffffff;    
 }
 
 .info-btn-2:hover,
@@ -825,7 +942,39 @@ fieldset {
     color: rgba(255, 255, 255, 0.3)
 }
 
-.rating {
+.hotel-rating {    
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;    
+}
+
+.rating-list {     
+    display: flex;
+    padding: 0;    
+    padding-top: 2px;
+    list-style: none;
+    width: 110px;    
+    margin-bottom: 50px;
+    justify-content: flex-end;
+}
+
+.rating-item {     
+    padding: 0;
+    margin: 0;
+    text-align: right;
+    padding-left: 5px;
+    justify-content: flex-end;
+}
+
+.rating {        
+    display: inline-block;    
+    padding: 3px 0;
+    margin: 0;
+    text-align: right;
+    padding-right: 14px;
+    box-sizing: border-box;
+    width: 110px;
     font-size: 14px;
     line-height: 21px;
     font-weight: 400;    
