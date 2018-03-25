@@ -28,9 +28,7 @@ fieldset {
   margin: -1px;
   border: 0;
   padding: 0;
-
   white-space: nowrap;
-
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
@@ -41,30 +39,36 @@ fieldset {
 }
 
 .main-nav {
+    display: flex;
+    justify-content: space-between;
     position: relative;
-    padding: 15px 73px;          
+    padding: 15px 70px;          
 	font-size: 14px;
     line-height: 26px;
     font-weight: 700;
-    color: #000000;
-    background-color: #ffffff;       
+    color: #000000;     
 }
 
-.main-nav-list {
-    display: flex;
+.main-nav-list-left,
+.main-nav-list-right {
+    box-shadow: inset 0 0 0 2px rgb(234, 255, 45);
+    display: inline-flex;
     padding: 0;    
     margin: 0;    
     list-style: none;
+    width: 459px;    
+} 
+
+.main-nav-list-left .main-nav-item {
+    width: 219px;
+    text-align: left;
 }
 
-.main-nav-item:nth-child(1) {
-    margin-right: 147px;
+.main-nav-list-right .main-nav-item {
+    width: 219px;
+    text-align: right;
 }
 
-.main-nav-item:nth-child(3) {
-    margin-right: 162px;
-    margin-left: auto;
-}
 
 .main-header-logo { 
     width: 138px;
@@ -158,8 +162,7 @@ fieldset {
     text-align: center;
 }
 
-.reasons-1,
-.reasons-2 {
+.reasons {
     display: flex;       
     margin: 0;
     padding: 0;       
@@ -175,16 +178,16 @@ fieldset {
     top: -76px;
 }
 
-.reasons-1 {
+.first-reason {
     margin-bottom: 60px;
 }
 
 
-.reasons-2 {
+.second-reason {
     margin-bottom: 0px;
 }   
 
-.reasons-2 .reasons-text {
+.second-reason .reasons-text {
     order: 1;
 }
 
@@ -198,7 +201,7 @@ fieldset {
     overflow: hidden;
 } 
 
-.reasons-1 .reasons-name {
+.reasons-name {
     width: 151px;
     text-align: center;    
     margin: 0 auto;
@@ -209,20 +212,7 @@ fieldset {
     font-weight: 700;    
 }
 
-
-.reasons-2 .reasons-name {    
-    width: 151px;
-    text-align: center;    
-    margin: 0 auto;
-    margin-bottom: 25px;     
-    padding-top: 45px;     
-    font-size: 21px;
-    line-height: 21px;
-    font-weight: 700;  
-}
-
-.reasons-1 .reasons-discription,
-.reasons-2 .reasons-discription {
+.reasons-discription {
     width: 305px;
     text-align: center;
     margin: 0;
