@@ -22,8 +22,7 @@ fieldset {
     border: 0 none;
 }
 
-.visually-hidden:not(:focus):not(:active),
-input[type="checkbox"].visually-hidden {
+.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -457,7 +456,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .plus,
-.mines {
+.minus {
     background-color: rgba(255,255,255,0);    
     padding: 0;
     border: none;
@@ -466,7 +465,7 @@ input[type="checkbox"].visually-hidden {
     height: 12px;
 }
 
-.mines {
+.minus {
     position: absolute;
     left: 125px;
     top: 12px;
@@ -478,7 +477,7 @@ input[type="checkbox"].visually-hidden {
     top: 12px;
 }
 
-.mines::before {
+.minus::before {
     content: "";
     position: absolute;   
     width: 100%;
@@ -508,7 +507,7 @@ input[type="checkbox"].visually-hidden {
 
 .plus:hover::after,
 .plus:hover::before,
-.mines:hover::before,
+.minus:hover::before,
 .plus:focus::after,
 .plus:focus::before,
 .mines:focus::before {
@@ -517,7 +516,7 @@ input[type="checkbox"].visually-hidden {
 
 .plus:active::after,
 .plus:active::before,
-.mines:active::before {
+.minus:active::before {
     background-color: #81b3d2;
 }
 
@@ -708,7 +707,7 @@ input[type="checkbox"].visually-hidden {
   background-position: center;
 }
 
-.filters-label input[type="checkbox"]:locked + .checkbox-indicator {  
+/*.filters-label input[type="checkbox"]:locked + .checkbox-indicator {  
   position: absolute;
   top: -3px;
   left: 0px;
@@ -717,7 +716,7 @@ input[type="checkbox"].visually-hidden {
   background-image: url(../img/checkbox-locked.svg);
   background-repeat: no-repeat;
   background-position: center; 
-}
+}*/
 
 .filter-range {
     margin: 0;
@@ -949,6 +948,7 @@ input[type="checkbox"].visually-hidden {
     margin-bottom: 50px;
     position: relative;    
     padding-left: 72px;
+    padding-right: 72px;
 }
 
 .searched-item::before {
@@ -978,17 +978,22 @@ input[type="checkbox"].visually-hidden {
 
 .hotel-name {    
     display: flex;
-
+    justify-content: space-between;
+    width: 1200px;   
 }
 
-.hotel-discription {    
+.hotel-main-inf {    
+    display: flex;
+    width: 425px;
+}
+
+.hotel-description {    
     display: flex;
     flex-direction: column;
-    margin-left: 30px;
-    margin-right: 525px;    
+    margin-left: 30px;       
 }
 
-.hotel-name h3 {
+.hotel-description h3 {
     margin: 0;          
     color: #000000;
     font-size: 21px;
@@ -1058,9 +1063,11 @@ input[type="checkbox"].visually-hidden {
     color: rgba(255, 255, 255, 0.3)
 }
 
-.hotel-rating {    
+.hotel-rating {   
     padding: 0;
+    margin: 0;
     display: flex;
+    width: 115px;    
     flex-direction: column;
     justify-content: flex-end;    
 }
@@ -1079,8 +1086,7 @@ input[type="checkbox"].visually-hidden {
     padding: 0;
     margin: 0;
     text-align: right;
-    padding-left: 5px;
-    justify-content: flex-end;
+    padding-left: 5px;    
 }
 
 .rating {        
