@@ -35,48 +35,55 @@
       <form class="hotels-filter-form" action="https://echo.htmlacademy.ru" method="get">
         <fieldset class="filters-fieldset">
           <legend>Инфраструктура:</legend>
-          <ul class="hotels-filter-list">
-            <li class="hotels-filter-item">
-              <input class="filters-checkbox" type="checkbox" name="infrastructure-pool" >
-              <label class="filters-label">Бассейн</label>
-            </li>         
-            <li class="hotels-filter-item">
-              <input class="filters-checkbox" type="checkbox" name="infrastructure-parking" >
-              <label class="filters-label"> Парковка</label>
-            </li>
-            <li class="hotels-filter-item">
-              <input class="filters-checkbox" type="checkbox" name="infrastructure-wifi" >
-              <label class="filters-label"> Wi-fi</label>
-            </li>
-          </ul>         
+          <label class="filters-label">          
+            <input class="visually-hidden" type="checkbox" name="infrastructure-pool" >
+            <span class="checkbox-indicator"></span>
+            Бассейн
+          </label>
+          <label class="filters-label">          
+            <input class="visually-hidden" type="checkbox" name="infrastructure-parking" >
+            <span class="checkbox-indicator"></span>
+            Парковка
+          </label>
+          <label class="filters-label">
+            <input class="visually-hidden" type="checkbox" name="infrastructure-wifi" >
+            <span class="checkbox-indicator"></span>
+            Wi-fi
+          </label>              
         </fieldset>
         <fieldset class="filters-fieldset">
           <legend>Тип жилья</legend>
           <label class="filters-label">
-            <input class="filters-checkbox" type="checkbox" name="type-hotel" >
+            <input class="visually-hidden" type="checkbox" name="type-hotel" >
+            <span class="checkbox-indicator"></span>
             Гостиница
           </label>
           <label class="filters-label">
-            <input class="filters-checkbox" type="checkbox" name="type-motel" >
+            <input class="visually-hidden" type="checkbox" name="type-motel" >
+            <span class="checkbox-indicator"></span>
             Мотель
           </label>
           <label class="filters-label">
-            <input class="filters-checkbox" type="checkbox" name="type-apartment" >
+            <input class="visually-hidden" type="checkbox" name="type-apartment" >
+            <span class="checkbox-indicator"></span>
             Апартаменты
           </label>
         </fieldset>
-        <fieldset class="filters-fieldset">
-          <legend>Стоимость в сутки(Р):</legend>
-          <label class="filters-price-label">
-            От
-            <input class="filters-text" type="text" name="low-price" placeholder="0" >
-          </label>
-          <label class="filters-price-label">
-            До
-            <input class="filters-text" type="text" name="high-price" placeholder="3000" >
-          </label>
-          <button class="filters-button">Показать</button>
-        </fieldset>
+        <div class="filter-range">
+          <div class="filter-range-title">Стоимость в сутки (р):</div>
+          <div class="price-controls">
+            <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+            <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
+          </div>
+          <div class="range-controls">
+            <div class="scale">
+              <div class="bar"></div>
+            </div>
+            <div class="range-toggle range-toggle-min"></div>
+            <div class="range-toggle range-toggle-max"></div>
+          </div>
+          <button class="btn-transparent" type="submit">Показать</button>
+        </div>
       </form>      
       <section class="catalog">
         <section class="sorting">
@@ -118,16 +125,16 @@
               <div class="hotel-rating">
                 <ul class="rating-list">
                   <li class="rating-item">
-                    <img src="img/star.svg">
+                    <img src="img/star.svg" alt="Звезда рейтинга">
                   </li>
                   <li class="rating-item">
-                    <img src="img/star.svg">
+                    <img src="img/star.svg" alt="Звезда рейтинга">
                   </li>
                   <li class="rating-item">
-                    <img src="img/star.svg">
+                    <img src="img/star.svg" alt="Звезда рейтинга">
                   </li>
                   <li class="rating-item">
-                    <img src="img/star.svg">
+                    <img src="img/star.svg" alt="Звезда рейтинга">
                   </li>
                 </ul>
                 <p class="rating">Рейтинг:<span> 8,5</span></p>
@@ -153,13 +160,13 @@
               <div class="hotel-rating">
                 <ul class="rating-list">
                   <li class="rating-item">
-                    <img src="img/star.svg">
+                    <img src="img/star.svg" alt="Звезда рейтинга">
                   </li>
                   <li class="rating-item">
-                    <img src="img/star.svg">
+                    <img src="img/star.svg" alt="Звезда рейтинга">
                   </li>
                   <li class="rating-item">
-                    <img src="img/star.svg">
+                    <img src="img/star.svg" alt="Звезда рейтинга">
                   </li>                
                 </ul>
                 <p class="rating">Рейтинг:<span>8,9</span></p>
@@ -185,10 +192,10 @@
               <div class="hotel-rating">
                 <ul class="rating-list">
                   <li class="">
-                    <img src="img/star.svg">
+                    <img src="img/star.svg" alt="Звезда рейтинга">
                   </li>
                   <li class="rating-item">
-                    <img src="img/star.svg">
+                    <img src="img/star.svg" alt="Звезда рейтинга">
                   </li>                                
                 </ul>
                 <p class="rating">Рейтинг:<span>9,2</span></p>

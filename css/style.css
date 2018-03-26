@@ -22,7 +22,8 @@ fieldset {
     border: 0 none;
 }
 
-.visually-hidden:not(:focus):not(:active) {
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -641,101 +642,216 @@ fieldset {
 
 .hotels-filter-form {
     display: flex;
-    padding: 25px 70px;
-    margin-bottom: 30px;
-    height: 217px;    
+    padding: 0 72px;
+    padding-top: 27px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;      
     box-sizing: border-box;
 	background-image: url("../img/filter-background-1200.jpg");
 	background-position: top center;
     background-repeat: no-repeat;
-    background-size: 1200px 800px;    
+    background-size: 1200px 800px;     
 }
 
-.filters-fieldset {      
+.filters-fieldset {          
     padding: 0;
     margin-right: 115px;
 }
 
-.hotels-filter-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.hotels-filter-item {
-    box-shadow: inset 0 0 0 2px rgb(234, 255, 45);
-    position: relative;
-    cursor: pointer;
-    padding-left: 40px;
-    margin-bottom: 20px;
-}
-
-.hotels-filter-item:lastchild {
-    margin-bottom: 0;
-}
-
-.hotels-filter-item label {
-    padding-left: 15px;
-}
-
-
-.filters-checkbox + .filters-label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 24px;
-  height: 24px;
-  border: 2px solid #000000;
-}
-
-.filters-checkbox:checked + .filters-label::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;    
-    background-image: url("../img/checkbox-on.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 17px;
-    height: 17px;
-}   
-    
-
-.filters-fieldset:last-child {
-    margin: 0;
-    margin-left: 345px;
-}
-
-.filters-fieldset legend {
-    margin-bottom: 20px;
-	color: #ffffff;
-	font-size: 16px;
+.filters-fieldset legend {     
+    margin-bottom: 25px;
+    color: #ffffff;
+    font-size: 16px;
     line-height: 21px;
     font-weight: 700;
 }
 
-.filters-label {    
-    margin-bottom: 20px;    
-	color: #ffffff;
+.filters-label {  
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 25px;
+    padding-left: 40px;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    color: #ffffff;
+    cursor: pointer;
 }
 
 .filters-label:last-child {
-    margin-bottom: 0;
+    margin: 0;
 }
 
-.filters-button {
-    text-transform: uppercase;
-	color: #ffffff;
-	background-color: transparent;
-	padding: 11px 35px;
-	border: 2px solid #ffffff;
-    outline: none;
+.filters-label input[type="checkbox"] + .checkbox-indicator {
+  position: absolute;
+  top: -3px;
+  left: 0;      
+  width: 27px;
+  height: 27px;
+  background-image: url(../img/checkbox-off.svg);
+  background-repeat: no-repeat;
+  background-position: center; 
 }
 
-.filters-button:hover,
-.filters-button:focus {
-    background-color: #ffffff;
-    color: #000000;
+.filters-label input[type="checkbox"]:checked + .checkbox-indicator {  
+  position: absolute;
+  top: -3px;
+  left: 2px;
+  width: 27px;
+  height: 27px;
+  background-image: url(../img/checkbox-on.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.filters-label input[type="checkbox"]:locked + .checkbox-indicator {  
+  position: absolute;
+  top: -3px;
+  left: 0px;
+  width: 27px;
+  height: 27px;
+  background-image: url(../img/checkbox-locked.svg);
+  background-repeat: no-repeat;
+  background-position: center; 
+}
+
+.filter-range {
+    margin: 0;
+    padding: 0;    
+    width: 330px;
+    margin-left: auto;
+    color: #ffffff;
+}
+
+.filter-range-title {
+  margin-bottom: 9px;
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.price-controls {
+  position: relative;
+  
+  height: 36px;
+  margin-bottom: 20px;
+
+  font-size: 0;
+
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+}
+
+.price-controls::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 2px;
+  height: 22px;
+
+  background: #ffffff;
+  transform: translate(-50%, -50%);
+}
+
+.price-controls label {
+  display: inline-block;
+
+  font-size: 14px;
+  line-height: 38px;
+  vertical-align: top;
+
+  cursor: pointer;
+}
+
+.price-controls .min-price,
+.price-controls .max-price {
+  width: 90px;
+  padding-left: 65px;
+}
+
+.price-controls input {
+  width: 50px;
+  margin: 0;
+
+  color: inherit;
+  font: inherit;
+
+  background: none;
+  border: none;
+}
+
+.range-controls {
+  position: relative;
+
+  margin-bottom: 32px;
+}
+
+.range-controls .scale {
+  height: 2px;
+
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+
+  background: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+  top: -9px;
+
+  width: 4px;
+  height: 4px;
+
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+
+.range-toggle:hover {
+  background: #1c4f80;
+}
+
+.range-toggle-min {
+  left: 0;
+}
+
+.range-toggle-max {
+  left: 80%;
+}
+
+.btn-transparent {
+  display: block;
+  margin: 0 auto;
+  padding: 6px 35px;
+
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.btn-transparent:hover {
+  color: #000000;
+
+  background: #ffffff;
 }
 
 .catalog {
