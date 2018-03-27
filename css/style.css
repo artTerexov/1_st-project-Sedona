@@ -356,7 +356,11 @@ fieldset {
     top: 86px;
     left: 315px;
     z-index: 1;
-    /*display: none;  */  
+    display: none;    
+}
+
+.modal-show {
+  display: block;
 }
 
 .hotels-search-form {    
