@@ -172,23 +172,23 @@ fieldset {
 	color: #ffffff;
 }
 
-.reasons-town,
-.reasons-bridge {
+.town,
+.bridge {
     position: absolute;
     left: 0;
     top: -76px;
 }
 
-.first-reason {
+.reasons-town {
     margin-bottom: 60px;
 }
 
 
-.second-reason {
+.reasons-bridge {
     margin-bottom: 0px;
 }   
 
-.second-reason .reasons-text {
+.reasons-bridge .reasons-text {
     order: 1;
 }
 
@@ -855,14 +855,14 @@ fieldset {
 
 .catalog {
     padding: 0;
-    margin: 0;
-    margin-bottom: 62px;
+    margin: 0;    
 }
 
 .sorting {
     display: flex;        
     padding: 0 72px;
-    margin-bottom: 55px;        
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e5e5e5;        
 }
 
 .search-result {    
@@ -944,31 +944,8 @@ fieldset {
 }
 
 .searched-item {     
-    display: flex;
-    margin-bottom: 50px;
-    position: relative;    
-    padding-left: 72px;
-    padding-right: 72px;
-}
-
-.searched-item::before {
-    content: "";
-    position: absolute;
-    top: -30px;
-    left: 0;
-    width: 1200px;
-    height: 1px;
-    background-color: #e5e5e5;
-}
-
-.searched-item:last-child::after {
-    content: "";
-    position: absolute;
-    top: 120px;
-    left: 0;
-    width: 1200px;
-    height: 1px;
-    background-color: #e5e5e5;
+    display: flex;    
+    position: relative;   
 }
 
 .hotel-img {
@@ -979,7 +956,11 @@ fieldset {
 .hotel-name {    
     display: flex;
     justify-content: space-between;
-    width: 1200px;   
+    width: 1200px;
+    padding: 0 72px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #e5e5e5;   
 }
 
 .hotel-main-inf {    
@@ -987,9 +968,7 @@ fieldset {
     width: 425px;
 }
 
-.hotel-description {    
-    display: flex;
-    flex-direction: column;
+.hotel-description {   
     margin-left: 30px;       
 }
 
@@ -1067,9 +1046,8 @@ fieldset {
     padding: 0;
     margin: 0;
     display: flex;
-    width: 115px;    
-    flex-direction: column;
-    justify-content: flex-end;    
+    width: 115px;     
+    flex-direction: column;       
 }
 
 .rating-list {     
@@ -1078,7 +1056,7 @@ fieldset {
     padding-top: 2px;
     list-style: none;
     width: 110px;    
-    margin-bottom: 50px;
+    margin-bottom: 42px;
     justify-content: flex-end;
 }
 
