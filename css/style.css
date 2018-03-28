@@ -15,6 +15,7 @@ body {
   position: relative;
   margin: 0 auto;
   background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 a {
@@ -589,7 +590,7 @@ fieldset {
     position: absolute;
     bottom: 0;    
     width: 1200px;                   
-    padding-top: 38px;   
+    padding-top: 35px;   
     background-color: rgba(255, 255, 255, 0.9);    
     padding-bottom: 40px;     	
 }
@@ -878,7 +879,7 @@ fieldset {
 .catalog {
     padding: 0;
     margin: 0;
-    padding-bottom: 130px;    
+    padding-bottom: 125px;    
 }
 
 .sorting {
