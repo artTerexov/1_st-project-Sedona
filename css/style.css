@@ -10,20 +10,20 @@ body {
   text-transform: uppercase;
 }
 
-.body-wrapper {
-  width: 1200px;
-  position: relative;
-  margin: 0 auto;
-  background-color: #ffffff;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
-}
-
 a {
   text-decoration: none;
 }
 
 fieldset {
   border: 0 none;
+}
+
+.body-wrapper {
+  width: 1200px;
+  position: relative;
+  margin: 0 auto;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 .visually-hidden {
@@ -67,12 +67,12 @@ fieldset {
 } 
 
 .main-nav-list-left .main-nav-item {
-  width: 219px;
+  width: 218px;
   text-align: left;    
 }
 
 .main-nav-list-right .main-nav-item {
-  width: 219px;
+  width: 218px;
   text-align: right;    
 }
 
@@ -228,7 +228,7 @@ fieldset {
   width: 280px;
   text-align: center;
   margin: 0 auto;    
-  margin-top: 20px;    
+  margin-top: 24px;    
   padding-bottom: 60px; 
 }
 
@@ -236,7 +236,7 @@ fieldset {
   width: 305px;
   text-align: center;
   margin: 0 auto;
-  margin-top: 20px;    
+  margin-top: 22px;    
   padding-bottom: 60px; 
 }
 
@@ -253,18 +253,21 @@ fieldset {
 
 .features-item:nth-child(1) {
   background-image: url("../img/icon-1.svg");
+  background-size: 75px 72px;
   background-repeat: no-repeat;
   background-position: top center;
 }
 
 .features-item:nth-child(2) {
   background-image: url("../img/icon-3.svg");
+  background-size: 74px 70px;
   background-repeat: no-repeat;
   background-position: top center;
 }
 
 .features-item:nth-child(3) {
   background-image: url("../img/icon-2.svg");
+  background-size: 64px 76px;
   background-repeat: no-repeat;
   background-position: top center;
 }
@@ -306,15 +309,15 @@ fieldset {
   color: #000000;
   width: 120px;    
   margin: 0 auto;
-  margin-top: 48px;
+  margin-top: 45px;
   padding-bottom: 25px;
 }
 
 .grey-features-item p {
   margin: 0 auto;
   padding: 0;
-  padding-bottom: 58px;
-  margin-top: 20px;
+  padding-bottom: 60px;
+  margin-top: 22px;
   width: 266px;
 }
 
@@ -386,7 +389,7 @@ fieldset {
   flex-wrap: wrap;          
   width: 460px;    
   margin: 0 auto;
-  padding: 58px 55px;
+  padding: 56px 53px;
   background-color: #ffffff;	
 }
 
@@ -400,21 +403,20 @@ fieldset {
 .hotels-search-item:nth-child(1),
 .hotels-search-item:nth-child(2) {
   width: 460px;    
-  margin-bottom: 30px;
+  margin-bottom: 33px;
 }
 
 .hotels-search-item:nth-child(3), 
 .hotels-search-item:nth-child(4) {
   width: 230px;
-  margin-bottom: 58px;
+  margin-bottom: 53px;
 }
 
 .hotels-search-item:nth-child(1) input,
 .hotels-search-item:nth-child(2) input {      
   width: 346px;     
-  box-sizing: border-box;
-  padding: 0;
-  padding-left: 15px;
+  box-sizing: border-box;  
+  padding-left: 13px;
   padding-right: 35px;   
 }
 
@@ -473,8 +475,8 @@ fieldset {
 .hotels-search-item:nth-child(3) input,
 .hotels-search-item:nth-child(4) input {
   box-sizing: border-box;
-  padding-left: 38px;
-  padding-right: 38px;
+  padding-left: 40px;
+  padding-right: 40px;
   width: 115px;
   text-align: center;        
 }
@@ -579,7 +581,7 @@ fieldset {
 
 .search-button {
   width: 460px;    
-	padding: 15px;
+	padding: 17px;
   font-size: 21px;
   line-height: 26px;	
   text-align: center;
@@ -605,7 +607,7 @@ fieldset {
   position: absolute;
   bottom: 0;    
   width: 1200px;                   
-  padding-top: 35px;   
+  padding-top: 38px;   
   background-color: rgba(255, 255, 255, 0.9);    
   padding-bottom: 40px;     	
 }
@@ -616,9 +618,9 @@ fieldset {
   line-height: 26px;
   font-weight: 700;
   margin: 0;    
-  margin-right: 255px;
-  margin-left: 135px;
-  padding-top: 10px;
+  margin-right: 257px;
+  margin-left: 132px;
+  padding-top: 8px;
 }
 
 .social-list {
@@ -666,6 +668,7 @@ fieldset {
 .developer-contact p {
   padding: 0;
   margin: 0;
+  padding-bottom: 5px;  
 }
 
 .developer-link:hover path,
@@ -679,7 +682,8 @@ fieldset {
 
 .hotels-filter-form {
   display: flex;
-  padding: 0 72px;
+  padding-left: 68px;
+  padding-right: 72px;
   padding-top: 27px;
   padding-bottom: 30px;
   margin-bottom: 30px;      
@@ -711,7 +715,7 @@ fieldset {
   margin: 0;
   padding: 0;
   margin-bottom: 25px;
-  padding-left: 40px;
+  padding-left: 42px;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
@@ -748,29 +752,25 @@ fieldset {
 .filter-range {
   margin: 0;
   padding: 0;    
-  width: 330px;
+  width: 320px;
   margin-left: auto;
   color: #ffffff;
 }
 
 .filter-range-title {
   margin-bottom: 9px;
-
   font-weight: 600;
   font-size: 16px;
   line-height: 21px;
 }
 
 .price-controls {
-  position: relative;
-  
-  height: 36px;
+  position: relative;  
+  height: 34px;
   margin-bottom: 20px;
-
   font-size: 0;
-
   border: 2px solid #ffffff;
-  border-radius: 2px;
+  border-radius: 2px;  
 }
 
 .price-controls::after {
@@ -778,21 +778,17 @@ fieldset {
   position: absolute;
   top: 50%;
   left: 50%;
-
   width: 2px;
   height: 22px;
-
   background: #ffffff;
   transform: translate(-50%, -50%);
 }
 
 .price-controls label {
-  display: inline-block;
-
+  display: inline-block;  
   font-size: 14px;
-  line-height: 38px;
-  vertical-align: top;
-
+  margin: 0;  
+  line-height: 38px;  
   cursor: pointer;
 }
 
@@ -816,13 +812,11 @@ fieldset {
 
 .range-controls {
   position: relative;
-
   margin-bottom: 32px;
 }
 
 .range-controls .scale {
   height: 2px;
-
   background: rgba(255, 255, 255, 0.3);
 }
 
@@ -863,12 +857,10 @@ fieldset {
   display: block;
   margin: 0 auto;
   padding: 6px 35px;
-
   font-size: 14px;
   line-height: 20px;
   color: #ffffff;
   text-transform: uppercase;
-
   background: transparent;
   border: 2px solid #ffffff;
   border-radius: 2px;
@@ -910,7 +902,8 @@ fieldset {
 
 .sorting-title { 
   margin: auto 0; 
-  padding-right: 38px;   
+  padding-right: 38px;
+  padding-top: 5px;   
   color: #000000;
   font-size: 12px;
   line-height: 18px;
@@ -920,9 +913,11 @@ fieldset {
 .sorting-list {    
   display: flex;
   justify-content: space-between;
-  width: 240px;
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
+  margin-top: 4px; 
+  width: 240px;  
 }
 
 .sorting-list a {    
@@ -953,7 +948,8 @@ fieldset {
   display: flex;
   justify-content: space-between;
   width: 35px;
-  margin-left: 500px; 
+  margin-left: 500px;
+  padding-top: 5px; 
 }
 
 .sorting-arrow path:hover,
@@ -1082,7 +1078,7 @@ fieldset {
 .rating-list {     
   display: flex;
   padding: 0;    
-  padding-top: 2px;
+  padding-top: 5px;
   list-style: none;
   width: 110px;    
   margin-bottom: 42px;
@@ -1101,7 +1097,7 @@ fieldset {
   padding: 3px 0;
   margin: 0;
   text-align: right;
-  padding-right: 14px;
+  padding-right: 12px;
   box-sizing: border-box;
   width: 110px;
   font-size: 14px;
