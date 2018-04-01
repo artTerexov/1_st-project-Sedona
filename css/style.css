@@ -14,16 +14,11 @@ a {
   text-decoration: none;
 }
 
-fieldset {
-  border: 0 none;
-}
-
 .body-wrapper {
   width: 1200px;
   position: relative;
   margin: 0 auto;
-  background-color: #ffffff;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  background-color: #ffffff;  
 }
 
 .visually-hidden {
@@ -46,24 +41,27 @@ fieldset {
 }
 
 .main-nav {
-  display: flex;
-  justify-content: space-between;
+  display: flex;  
   position: relative;
   padding: 15px 70px;          
 	font-size: 14px;
   line-height: 26px;
   font-weight: 700;
-  color: #000000;     
+  color: #000000;       
 }
 
 .main-nav-list-left,
 .main-nav-list-right {    
-  display: inline-flex;
+  display: flex;
   justify-content: space-between;
   padding: 0;    
   margin: 0;    
   list-style: none;
-  width: 459px;    
+  width: 459px;     
+}
+
+.main-nav-list-right {
+  margin-left: auto;
 } 
 
 .main-nav-list-left .main-nav-item {
@@ -128,6 +126,7 @@ fieldset {
 	background-image: url("../img/promo-background-1200.jpg");
   background-position: 0 -57px;
   background-repeat: no-repeat;
+  background-color: #ddebf4;
 }
 
 .main-image::after {
@@ -345,17 +344,19 @@ fieldset {
 }
 
 .hotels-search-button {
+  display: block;  
   width: 570px;
-	padding: 30px;	 
+  margin: 0 auto;  
+	padding: 30px 0;	 
   font-size: 21px;
   line-height: 26px;	
   text-align: center;
   font-weight: 700;
   color: #ffffff;    
   text-transform: uppercase;
-  background-color: #766357;
-  border: none;
+  background-color: #766357;  
   outline: none;
+  cursor: pointer;  
 }
 
 .hotels-search-button:hover,
@@ -376,12 +377,11 @@ fieldset {
   position: absolute;
   top: 86px;
   left: 315px;
-  z-index: 1;
-  display: none;    
+  z-index: 1;      
 }
 
-.modal-show {
-  display: block;
+.modal-close {
+  display: none;
 }
 
 .hotels-search-form {    
@@ -602,7 +602,7 @@ fieldset {
 	background-color: #5496bd;	
 }
 
-.main-footer {
+.main-footer {  
   display: flex;
   position: absolute;
   bottom: 0;    
@@ -613,22 +613,29 @@ fieldset {
 }
 
 .footer-hashtag {
-  width: 135px;    
+  width: 400px;
+  text-align: center;    
 	font-size: 21px;
   line-height: 26px;
   font-weight: 700;
-  margin: 0;    
-  margin-right: 257px;
-  margin-left: 132px;
+  margin: 0;  
   padding-top: 8px;
 }
 
-.social-list {
+.footer-social {  
   display: flex;
+  justify-content: center;
+  width: 400px;
+  margin: 0;
+  padding: 0;   
+}
+
+.social-list {
+  display: flex;  
   margin: 0;
   padding: 0;
   width: 150px;
-  justify-content: space-between;
+  justify-content: space-between;  
 }
 
 .social-button {
@@ -655,19 +662,18 @@ fieldset {
 
 .developer-contact { 
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  width: 200px;
-  margin-left: auto;
-  margin-right: 100px;    
+  width: 400px;     
 	font-size: 14px;
   line-height: 26px;
-  font-style: normal;	
+  font-style: normal; 
 }
 
 .developer-contact p {
   padding: 0;
   margin: 0;
+  padding-right: 5px;
   padding-bottom: 5px;  
 }
 
@@ -691,7 +697,12 @@ fieldset {
 	background-image: url("../img/filter-background-1200.jpg");
 	background-position: top center;
   background-repeat: no-repeat;
-  background-size: 1200px 800px;     
+  background-size: 1200px 800px;
+  background-color: #86a5c2;     
+}
+
+.hotels-filter-form fieldset {
+  border: 0 none;
 }
 
 .filters-fieldset {          
@@ -749,6 +760,18 @@ fieldset {
   background-position: center;
 }
 
+.filters-label input[type="checkbox"]:disabled  + .checkbox-indicator {  
+  position: absolute;
+  top: -3px;
+  left: 0px;
+  width: 30px;
+  height: 30px;
+  background-image: url(../img/checkbox-disabled.off);
+  opacity: 0.6;   
+  background-repeat: no-repeat;
+  background-position: center;  
+}
+
 .filter-range {
   margin: 0;
   padding: 0;    
@@ -785,7 +808,8 @@ fieldset {
 }
 
 .price-controls label {
-  display: inline-block;  
+  display: inline-block;
+  vertical-align: top;   
   font-size: 14px;
   margin: 0;  
   line-height: 38px;  
@@ -876,7 +900,7 @@ fieldset {
 .catalog {
   padding: 0;
   margin: 0;
-  padding-bottom: 125px;    
+  padding-bottom: 126px;    
 }
 
 .sorting {
@@ -897,6 +921,7 @@ fieldset {
 
 .hotels-number {
   display: inline-block;
+  vertical-align: bottom;
   padding-left: 6px;
 }
 
@@ -923,6 +948,7 @@ fieldset {
 .sorting-list a {    
   margin: 0;
   display: inline-block;
+  vertical-align: bottom;
   font-size: 12px;
   line-height: 18px;
   color: rgba(0, 0, 0, 0.3);
@@ -1025,6 +1051,7 @@ fieldset {
 
 .info-btn-1 {
   display: inline-block;
+  vertical-align: top;
   box-sizing: border-box;
   width: 110px;
   padding: 3px;
@@ -1046,7 +1073,8 @@ fieldset {
 }
 
 .info-btn-2 {
-  display: inline-block;    
+  display: inline-block;
+  vertical-align: top;    
   text-align: center;
   box-sizing: border-box;
   width: 142px;
@@ -1093,7 +1121,8 @@ fieldset {
 }
 
 .rating {        
-  display: inline-block;    
+  display: inline-block; 
+  vertical-align: top;   
   padding: 3px 0;
   margin: 0;
   text-align: right;

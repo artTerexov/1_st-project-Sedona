@@ -2,6 +2,6 @@
     var popup = document.querySelector(".modal-search");
 
     button.addEventListener("click", function (evt) {        
-    popup.classList.toggle("modal-show");
+        popup.classList.toggle("modal-close");
     });
   
