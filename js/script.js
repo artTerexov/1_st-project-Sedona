@@ -1,7 +1,7 @@
-	var button = document.querySelector(".hotels-search-button");
-    var popup = document.querySelector(".modal-search");
+var button = document.querySelector(".hotels-search-button");
+var popup = document.querySelector(".modal-search");
 
-    button.addEventListener("click", function (evt) {        
-        popup.classList.toggle("modal-close");
-    });
+button.addEventListener("click", function (evt) {        
+  popup.classList.toggle("modal-close");
+});
   

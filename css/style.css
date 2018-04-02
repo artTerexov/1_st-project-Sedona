@@ -345,7 +345,7 @@ a {
 
 .hotels-search-button {
   display: block;  
-  width: 570px;
+  width: 566px;
   margin: 0 auto;  
 	padding: 30px 0;	 
   font-size: 21px;
@@ -369,12 +369,13 @@ a {
 	background-color: #503e33;		
 }
 
-.modal-form {
+.modal-form { 
   position: relative;
 }
 
 .modal-search {
   position: absolute;
+  width: 570px;
   top: 86px;
   left: 315px;
   z-index: 1;      
@@ -766,8 +767,18 @@ a {
   left: 0px;
   width: 30px;
   height: 30px;
-  background-image: url(../img/checkbox-disabled.off);
-  opacity: 0.6;   
+  background-image: url(../img/checkbox-disabled-off.svg);  
+  background-repeat: no-repeat;
+  background-position: center;  
+}
+
+.filters-label input[type="checkbox"]:checked:disabled  + .checkbox-indicator {  
+  position: absolute;
+  top: -3px;
+  left: 2px;
+  width: 30px;
+  height: 30px;
+  background-image: url(../img/checkbox-disabled-on.svg);  
   background-repeat: no-repeat;
   background-position: center;  
 }
@@ -854,10 +865,8 @@ a {
 .range-toggle {
   position: absolute;
   top: -9px;
-
   width: 4px;
   height: 4px;
-
   background: #ababab;
   border: 8px solid #ffffff;
   border-radius: 50%;
